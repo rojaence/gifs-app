@@ -1,0 +1,22 @@
+<div id="nav" class="w-full px-6">
+  @for (option of menuOptions; track option.label) {
+    <a
+      [routerLink]="option.path"
+      class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 transition ease-linear duration-150"
+      #rla="routerLinkActive"
+      routerLinkActive
+      [ngClass]="{
+        'hover:bg-white/5': !rla.isActive,
+        'bg-blue-800': rla.isActive
+      }"
+      >
+        <div>
+          <i [ngClass]="option.icon" class="bi"></i>
+        </div>
+        <div class="flex flex-col">
+            <span class="text-lg font-bold leading-5 text-white">{{ option.label }}</span>
+            <span class="text-sm text-white/50 md:block">{{ option.sublabel }}</span>
+        </div>
+    </a>
+  }
+</div>
