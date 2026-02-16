@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { MenuOption } from '../../interfaces/menu';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { CommonModule } from '@angular/common';
+import { SearchHistoryComponent } from "../search-history/search-history.component";
 
 @Component({
   selector: 'app-gifs-side-menu-options',
-  imports: [RouterLink, CommonModule, RouterLinkActive],
+  imports: [RouterLink, CommonModule, RouterLinkActive, SearchHistoryComponent],
   templateUrl: './gifs-side-menu-options.component.html',
   styles: ``
 })

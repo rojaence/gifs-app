@@ -1,0 +1,4 @@
+<section class="py-2">
+  <h3>Mostrando: {{ query() }}</h3>
+  <app-gifs-list [items]="gifService.searchHistory()[query()]"></app-gifs-list>
+</section>
