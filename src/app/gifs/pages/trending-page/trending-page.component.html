@@ -1,3 +1,18 @@
-<section class="py-2">
+<!-- <section class="py-2">
   <app-gifs-list [items]="gifService.trendingGifs()"></app-gifs-list>
-</section>
+</section> -->
+
+
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
+  @for (group of trendingGifGroups(); track $index) {
+    <div class="grid gap-4">
+      @for (gif of group; track gif.id) {
+        <div>
+            <img class="h-full w-full object-cover rounded-lg" [src]="[gif.url]" alt="">
+        </div>
+      }
+    </div>
+  }
+</div>
+
